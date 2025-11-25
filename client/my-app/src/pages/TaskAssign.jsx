@@ -51,10 +51,14 @@ const TaskAssign = () => {
   }, [param?.id]);
   if(loading) return<div>loading...</div>
   return (
-    <div style={{ color: "white" }}>
-      {console.log(task)}
-      {task[0]?.status !== "Block" && <div>your user name is {task[0]?.assign_to?.username}</div>}
-      <div>This id is {task[0]?.status}ed</div>
+    <div className='min-h-screen bg-gray-800 text-gray-200'>
+      <div className='container mx-auto py-24'>
+        {console.log(task)}
+        {task[0]?.status !== "Block" && (
+          <div className=' capitalize'>Username : {task[0]?.assign_to?.username}</div>
+        )}
+        <div>This id is {task[0]?.status}ed</div>
+      </div>
     </div>
   );
 }

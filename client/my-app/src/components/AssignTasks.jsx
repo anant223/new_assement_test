@@ -32,8 +32,12 @@ const AssignTasks = () => {
     },[])
         if(loading) return <div>Loading...</div>
   return (
-    <div style={{ color: "white" }}>
-      <button onClick={assignTaskData} disabled={loading}>
+    <div className="" style={{ color: "white" }}>
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded"
+        onClick={assignTaskData}
+        disabled={loading}
+      >
         {loading ? "Refreshing..." : "Refresh Tasks"}
       </button>
       <div>

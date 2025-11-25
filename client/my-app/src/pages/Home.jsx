@@ -5,21 +5,15 @@ import AssignTasks from '../components/AssignTasks'
 
 const Home = () => {
   return (
-    <div>
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-          justifyContent: "space-between",
-          justifyItems: "center",
-          margin: "auto"
-        }}
-      >
-        <UserFrom />
-        <TaskForm />
-      </div>
-      <div>
-        <AssignTasks />
+    <div className=" min-h-screen w-full bg-gray-800 text-[#ffff]">
+      <div className=' container mx-auto py-24'>
+        <div className=' flex justify-between items-center'>
+          <UserFrom />
+          <TaskForm />
+        </div>
+        <div className='py-24 flex justify-center'>
+          <AssignTasks />
+        </div>
       </div>
     </div>
   );

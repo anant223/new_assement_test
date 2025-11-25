@@ -49,38 +49,47 @@ const UserFrom = () => {
     }
 
   return (
-    <div >
+    <div>
       <form>
         <div>
-          Username : <input
+          Username :{" "}
+          <input
             type="text"
             name="username"
             placeholder="Username"
             value={formData.username}
             onChange={handleChange}
-
+            class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
           />
         </div>
         <div>
-          Email: <input
+          Email:{" "}
+          <input
             type="email"
             name="useremail"
             placeholder="Email"
             value={formData.useremail}
             onChange={handleChange}
+            className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
           />
         </div>
         <div>
-          Phone: <input
+          Phone:{" "}
+          <input
             type="text"
             name="userphone"
             placeholder="Phone"
             value={formData.userphone}
             onChange={handleChange}
+            className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
           />
         </div>
-        <div>
-          <button type="submit" onClick={handleSubmit}>
+        <div className='py-2.5'>
+          <button
+            type="submit"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded"
+            onClick={handleSubmit}
+          >
             Submit
           </button>
         </div>

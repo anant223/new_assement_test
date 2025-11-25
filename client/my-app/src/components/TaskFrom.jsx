@@ -48,6 +48,7 @@ const TaskForm = () => {
             onChange={handleChange}
             value={newTaskAssign.assign_to}
             placeholder="Assign_to"
+            className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
           />
         </div>
         <div>
@@ -56,15 +57,21 @@ const TaskForm = () => {
             name="status"
             onChange={handleChange}
             value={newTaskAssign.status}
+            className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
           >
-            <option value="">Select status</option>
-            <option value="Assign">Assign</option>
-            <option value="UnAssign">UnAssign</option>
-            <option value="Block">Block</option>
+            <option className='text-black' value="">Select status</option>
+            <option className='text-black' value="Assign">Assign</option>
+            <option className='text-black' value="UnAssign">UnAssign</option>
+            <option className='text-black' value="Block">Block</option>
           </select>
         </div>
-        <div>
-          <button onClick={handleSubmit}>Submit</button>
+        <div className='py-2.5'>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2.5 px-4 rounded"
+            onClick={handleSubmit}
+          >
+            Submit
+          </button>
         </div>
       </form>
     </div>
